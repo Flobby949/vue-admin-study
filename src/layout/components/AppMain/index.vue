@@ -59,7 +59,7 @@ watch(
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 61px 20px 20px 20px;
+  padding: 101px 20px 20px 20px;
   box-sizing: border-box;
 }
 </style>
