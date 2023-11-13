@@ -23,6 +23,9 @@ dependencies:
   rgb-hex:
     specifier: ^4.1.0
     version: registry.npmmirror.com/rgb-hex@4.1.0
+  screenfull:
+    specifier: ^6.0.2
+    version: registry.npmmirror.com/screenfull@6.0.2
   vue:
     specifier: ^3.2.13
     version: registry.npmmirror.com/vue@3.3.8
@@ -9451,6 +9454,13 @@ packages:
       ajv-formats: registry.npmmirror.com/ajv-formats@2.1.1(ajv@8.12.0)
       ajv-keywords: registry.npmmirror.com/ajv-keywords@5.1.0(ajv@8.12.0)
     dev: true
+
+  registry.npmmirror.com/screenfull@6.0.2:
+    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==, tarball: https://registry.npmmirror.com/screenfull/-/screenfull-6.0.2.tgz}
+    name: screenfull
+    version: 6.0.2
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dev: false
 
   registry.npmmirror.com/select-hose@2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==, tarball: https://registry.npmmirror.com/select-hose/-/select-hose-2.0.0.tgz}

@@ -1,4 +1,3 @@
-import variables from '@/styles/variables.module.scss'
 import { MAIN_COLOR } from '@/constant'
 import { getItem } from '@/utils/storage'
 import { generateColors } from '@/utils/theme'
