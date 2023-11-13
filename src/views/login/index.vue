@@ -2,7 +2,8 @@
   <div class="login-container">
     <el-form class="login-form" :model="loginForm" :rules="loginRules" ref="loginFormRef">
       <div class="title-container">
-        <h3 class="title">用户登录</h3>
+        <h3 class="title">{{ $t('msg.login.title') }}</h3>
+        <lang-select class="lang-select" effect="light"></lang-select>
       </div>
 
       <el-form-item prop="username">
@@ -33,17 +34,22 @@
       </el-form-item>
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px" :loading="loading" @click="handleLogin">
-        登录
+        {{ $t('msg.login.loginBtn') }}
       </el-button>
+
+      <div class="tips" v-html="$t('msg.login.desc')"></div>
     </el-form>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { validatePassword } from './rules'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import LangSelect from '@/components/LangSelect'
+
 // 数据源
 const loginForm = ref({
   username: 'admin',
@@ -51,12 +57,15 @@ const loginForm = ref({
 })
 
 // 验证规则
+const i18n = useI18n()
 const loginRules = ref({
   username: [
     {
       required: true,
       trigger: 'blur',
-      message: '用户名为必填项'
+      message: computed(() => {
+        return i18n.t('msg.login.usernameRule')
+      })
     }
   ],
   password: [
@@ -113,7 +122,6 @@ $cursor: #fff;
   width: 100%;
   background-color: $bg;
   overflow: hidden;
-
   .login-form {
     position: relative;
     width: 520px;
@@ -135,15 +143,26 @@ $cursor: #fff;
       width: 85%;
 
       input {
-        background: transparent;
-        border: 0px;
-        -webkit-appearance: none;
-        appearance: none;
-        border-radius: 0px;
+        background: $bg;
+        border: 0;
         padding: 12px 5px 12px 15px;
         color: $light_gray;
         height: 47px;
         caret-color: $cursor;
+        margin-left: -12px;
+        margin-right: -12px;
+      }
+    }
+  }
+  .tips {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+
+    span {
+      &:first-of-type {
+        margin-right: 16px;
       }
     }
   }
@@ -164,6 +183,17 @@ $cursor: #fff;
       margin: 0px auto 40px auto;
       text-align: center;
       font-weight: bold;
+    }
+
+    ::v-deep(.lang-select) {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      background-color: white;
+      font-size: 22px;
+      padding: 4px;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
 
