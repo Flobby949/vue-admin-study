@@ -2,6 +2,7 @@ import { login, getUserInfo } from '@/api/system'
 import { setItem, getItem, removeAllItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
 import router from '@/router'
+import { setTimeStamp } from '@/utils/auth'
 
 export default {
   namespaced: true,
@@ -28,6 +29,7 @@ export default {
         })
           .then((data) => {
             console.log(data)
+            setTimeStamp()
             this.commit('user/setToken', data.token)
             resolve(data)
           })
