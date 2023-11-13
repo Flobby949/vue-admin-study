@@ -22,8 +22,8 @@ export default {
           password
         })
           .then((data) => {
-            console.log(data.data)
-            this.commit('user/setToken', data.data.token)
+            console.log(data)
+            this.commit('user/setToken', data.token)
             resolve(data)
           })
           .catch((err) => {
