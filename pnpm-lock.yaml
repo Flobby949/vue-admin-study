@@ -14,6 +14,9 @@ dependencies:
   element-plus:
     specifier: ^1.0.2-beta.28
     version: registry.npmmirror.com/element-plus@1.0.2-beta.71(vue@3.3.8)
+  path-browserify:
+    specifier: ^1.0.1
+    version: registry.npmmirror.com/path-browserify@1.0.1
   vue:
     specifier: ^3.2.13
     version: registry.npmmirror.com/vue@3.3.8
@@ -8061,6 +8064,12 @@ packages:
     version: 0.1.1
     engines: {node: '>=0.10.0'}
     dev: true
+
+  registry.npmmirror.com/path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==, tarball: https://registry.npmmirror.com/path-browserify/-/path-browserify-1.0.1.tgz}
+    name: path-browserify
+    version: 1.0.1
+    dev: false
 
   registry.npmmirror.com/path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==, tarball: https://registry.npmmirror.com/path-exists/-/path-exists-4.0.0.tgz}
