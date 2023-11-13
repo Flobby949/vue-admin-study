@@ -12,8 +12,8 @@ dependencies:
     specifier: ^3.8.3
     version: registry.npmmirror.com/core-js@3.33.2
   element-plus:
-    specifier: ^1.0.2-beta.28
-    version: registry.npmmirror.com/element-plus@1.0.2-beta.71(vue@3.3.8)
+    specifier: ^2.4.2
+    version: registry.npmmirror.com/element-plus@2.4.2(vue@3.3.8)
   path-browserify:
     specifier: ^1.0.1
     version: registry.npmmirror.com/path-browserify@1.0.1
@@ -51,7 +51,7 @@ devDependencies:
     version: registry.npmmirror.com/@vue/cli-plugin-vuex@5.0.8(@vue/cli-service@5.0.8)
   '@vue/cli-service':
     specifier: ~5.0.0
-    version: registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+    version: registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
   '@vue/eslint-config-standard':
     specifier: ^6.1.0
     version: registry.npmmirror.com/@vue/eslint-config-standard@6.1.0(@vue/cli-service@5.0.8)(eslint-plugin-import@2.29.0)(eslint-plugin-node@11.1.0)(eslint-plugin-promise@5.2.0)(eslint-plugin-vue@8.7.1)(eslint@7.32.0)(webpack@5.89.0)
@@ -1669,6 +1669,13 @@ packages:
       '@babel/helper-validator-identifier': registry.npmmirror.com/@babel/helper-validator-identifier@7.22.20
       to-fast-properties: registry.npmmirror.com/to-fast-properties@2.0.0
 
+  registry.npmmirror.com/@ctrl/tinycolor@3.6.1:
+    resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==, tarball: https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.6.1
+    engines: {node: '>=10'}
+    dev: false
+
   registry.npmmirror.com/@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==, tarball: https://registry.npmmirror.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz}
     name: '@discoveryjs/json-ext'
@@ -1676,11 +1683,15 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  registry.npmmirror.com/@element-plus/icons@0.0.11:
-    resolution: {integrity: sha512-iKQXSxXu131Ai+I9Ymtcof9WId7kaXvB1+WRfAfpQCW7UiAMYgdNDqb/u0hgTo2Yq3MwC4MWJnNuTBEpG8r7+A==, tarball: https://registry.npmmirror.com/@element-plus/icons/-/icons-0.0.11.tgz}
-    name: '@element-plus/icons'
-    version: 0.0.11
-    deprecated: Please use @element-plus/icons-vue instead.
+  registry.npmmirror.com/@element-plus/icons-vue@2.1.0(vue@3.3.8):
+    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.1.0.tgz}
+    id: registry.npmmirror.com/@element-plus/icons-vue/2.1.0
+    name: '@element-plus/icons-vue'
+    version: 2.1.0
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.3.8
     dev: false
 
   registry.npmmirror.com/@eslint/eslintrc@0.4.3:
@@ -1701,6 +1712,29 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  registry.npmmirror.com/@floating-ui/core@1.5.0:
+    resolution: {integrity: sha512-kK1h4m36DQ0UHGj5Ah4db7R0rHemTqqO0QLvUqi1/mUUp3LuAWbWxdxSIf/XsnH9VS6rRVPLJCncjRzUvyCLXg==, tarball: https://registry.npmmirror.com/@floating-ui/core/-/core-1.5.0.tgz}
+    name: '@floating-ui/core'
+    version: 1.5.0
+    dependencies:
+      '@floating-ui/utils': registry.npmmirror.com/@floating-ui/utils@0.1.6
+    dev: false
+
+  registry.npmmirror.com/@floating-ui/dom@1.5.3:
+    resolution: {integrity: sha512-ClAbQnEqJAKCJOEbbLo5IUlZHkNszqhuxS4fHAVxRPXPya6Ysf2G8KypnYcOTpx6I8xcgF9bbHb6g/2KpbV8qA==, tarball: https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.5.3.tgz}
+    name: '@floating-ui/dom'
+    version: 1.5.3
+    dependencies:
+      '@floating-ui/core': registry.npmmirror.com/@floating-ui/core@1.5.0
+      '@floating-ui/utils': registry.npmmirror.com/@floating-ui/utils@0.1.6
+    dev: false
+
+  registry.npmmirror.com/@floating-ui/utils@0.1.6:
+    resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==, tarball: https://registry.npmmirror.com/@floating-ui/utils/-/utils-0.1.6.tgz}
+    name: '@floating-ui/utils'
+    version: 0.1.6
+    dev: false
 
   registry.npmmirror.com/@hapi/hoek@9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==, tarball: https://registry.npmmirror.com/@hapi/hoek/-/hoek-9.3.0.tgz}
@@ -1866,12 +1900,6 @@ packages:
     version: 1.0.0-next.23
     dev: true
 
-  registry.npmmirror.com/@popperjs/core@2.11.8:
-    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==, tarball: https://registry.npmmirror.com/@popperjs/core/-/core-2.11.8.tgz}
-    name: '@popperjs/core'
-    version: 2.11.8
-    dev: false
-
   registry.npmmirror.com/@sideway/address@4.1.4:
     resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==, tarball: https://registry.npmmirror.com/@sideway/address/-/address-4.1.4.tgz}
     name: '@sideway/address'
@@ -1913,6 +1941,12 @@ packages:
     name: '@soda/get-current-script'
     version: 1.0.2
     dev: true
+
+  registry.npmmirror.com/@sxzz/popperjs-es@2.11.7:
+    resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==, tarball: https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz}
+    name: '@sxzz/popperjs-es'
+    version: 2.11.7
+    dev: false
 
   registry.npmmirror.com/@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==, tarball: https://registry.npmmirror.com/@trysound/sax/-/sax-0.2.0.tgz}
@@ -2033,6 +2067,20 @@ packages:
     version: 0.0.29
     dev: true
 
+  registry.npmmirror.com/@types/lodash-es@4.17.11:
+    resolution: {integrity: sha512-eCw8FYAWHt2DDl77s+AMLLzPn310LKohruumpucZI4oOFJkIgnlaJcy23OKMJxx4r9PeTF13Gv6w+jqjWQaYUg==, tarball: https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.11.tgz}
+    name: '@types/lodash-es'
+    version: 4.17.11
+    dependencies:
+      '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.201
+    dev: false
+
+  registry.npmmirror.com/@types/lodash@4.14.201:
+    resolution: {integrity: sha512-y9euML0cim1JrykNxADLfaG0FgD1g/yTHwUs/Jg9ZIU7WKj2/4IW9Lbb1WZbvck78W/lfGXFfe+u2EGfIJXdLQ==, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.201.tgz}
+    name: '@types/lodash'
+    version: 4.14.201
+    dev: false
+
   registry.npmmirror.com/@types/mime@1.3.5:
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==, tarball: https://registry.npmmirror.com/@types/mime/-/mime-1.3.5.tgz}
     name: '@types/mime'
@@ -2131,6 +2179,12 @@ packages:
     dependencies:
       '@types/node': registry.npmmirror.com/@types/node@20.9.0
     dev: true
+
+  registry.npmmirror.com/@types/web-bluetooth@0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz}
+    name: '@types/web-bluetooth'
+    version: 0.0.16
+    dev: false
 
   registry.npmmirror.com/@types/ws@8.5.9:
     resolution: {integrity: sha512-jbdrY0a8lxfdTp/+r7Z4CkycbOFN8WX+IOchLJr3juT/xzbJ8URyTVSJ/hvNdadTgM1mnedb47n+Y31GsFnQlg==, tarball: https://registry.npmmirror.com/@types/ws/-/ws-8.5.9.tgz}
@@ -2346,7 +2400,7 @@ packages:
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core@7.23.3
       '@vue/babel-preset-app': registry.npmmirror.com/@vue/babel-preset-app@5.0.8(@babel/core@7.23.3)(core-js@3.33.2)(vue@3.3.8)
-      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
       '@vue/cli-shared-utils': registry.npmmirror.com/@vue/cli-shared-utils@5.0.8
       babel-loader: registry.npmmirror.com/babel-loader@8.3.0(@babel/core@7.23.3)(webpack@5.89.0)
       thread-loader: registry.npmmirror.com/thread-loader@3.0.4(webpack@5.89.0)
@@ -2371,7 +2425,7 @@ packages:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
       eslint: '>=7.5.0'
     dependencies:
-      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
       '@vue/cli-shared-utils': registry.npmmirror.com/@vue/cli-shared-utils@5.0.8
       eslint: registry.npmmirror.com/eslint@7.32.0
       eslint-webpack-plugin: registry.npmmirror.com/eslint-webpack-plugin@3.2.0(eslint@7.32.0)(webpack@5.89.0)
@@ -2394,7 +2448,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
       '@vue/cli-shared-utils': registry.npmmirror.com/@vue/cli-shared-utils@5.0.8
     transitivePeerDependencies:
       - encoding
@@ -2408,10 +2462,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
     dev: true
 
-  registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8):
+  registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8):
     resolution: {integrity: sha512-nV7tYQLe7YsTtzFrfOMIHc5N2hp5lHG2rpYr0aNja9rNljdgcPZLyQRb2YRivTHqTv7lI962UXFURcpStHgyFw==, tarball: https://registry.npmmirror.com/@vue/cli-service/-/cli-service-5.0.8.tgz}
     id: registry.npmmirror.com/@vue/cli-service/5.0.8
     name: '@vue/cli-service'
@@ -2453,8 +2507,8 @@ packages:
       '@vue/cli-plugin-router': registry.npmmirror.com/@vue/cli-plugin-router@5.0.8(@vue/cli-service@5.0.8)
       '@vue/cli-plugin-vuex': registry.npmmirror.com/@vue/cli-plugin-vuex@5.0.8(@vue/cli-service@5.0.8)
       '@vue/cli-shared-utils': registry.npmmirror.com/@vue/cli-shared-utils@5.0.8
-      '@vue/component-compiler-utils': registry.npmmirror.com/@vue/component-compiler-utils@3.3.0
-      '@vue/vue-loader-v15': registry.npmmirror.com/vue-loader@15.11.1(css-loader@6.8.1)(webpack@5.89.0)
+      '@vue/component-compiler-utils': registry.npmmirror.com/@vue/component-compiler-utils@3.3.0(lodash@4.17.21)
+      '@vue/vue-loader-v15': registry.npmmirror.com/vue-loader@15.11.1(css-loader@6.8.1)(lodash@4.17.21)(webpack@5.89.0)
       '@vue/web-component-wrapper': registry.npmmirror.com/@vue/web-component-wrapper@1.3.0
       acorn: registry.npmmirror.com/acorn@8.11.2
       acorn-walk: registry.npmmirror.com/acorn-walk@8.3.0
@@ -2634,12 +2688,13 @@ packages:
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom@3.3.8
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.8
 
-  registry.npmmirror.com/@vue/component-compiler-utils@3.3.0:
+  registry.npmmirror.com/@vue/component-compiler-utils@3.3.0(lodash@4.17.21):
     resolution: {integrity: sha512-97sfH2mYNU+2PzGrmK2haqffDpVASuib9/w2/noxiFi31Z54hW+q3izKQXXQZSNhtiUpAI36uSuYepeBe4wpHQ==, tarball: https://registry.npmmirror.com/@vue/component-compiler-utils/-/component-compiler-utils-3.3.0.tgz}
+    id: registry.npmmirror.com/@vue/component-compiler-utils/3.3.0
     name: '@vue/component-compiler-utils'
     version: 3.3.0
     dependencies:
-      consolidate: registry.npmmirror.com/consolidate@0.15.1
+      consolidate: registry.npmmirror.com/consolidate@0.15.1(lodash@4.17.21)
       hash-sum: registry.npmmirror.com/hash-sum@1.0.2
       lru-cache: registry.npmmirror.com/lru-cache@4.1.5
       merge-source-map: registry.npmmirror.com/merge-source-map@1.1.0
@@ -2727,7 +2782,7 @@ packages:
       '@vue/cli-service':
         optional: true
     dependencies:
-      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(sass-loader@12.6.0)(vue@3.3.8)
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service@5.0.8(lodash@4.17.21)(sass-loader@12.6.0)(vue@3.3.8)
       eslint: registry.npmmirror.com/eslint@7.32.0
       eslint-config-standard: registry.npmmirror.com/eslint-config-standard@16.0.3(eslint-plugin-import@2.29.0)(eslint-plugin-node@11.1.0)(eslint-plugin-promise@5.2.0)(eslint@7.32.0)
       eslint-import-resolver-node: registry.npmmirror.com/eslint-import-resolver-node@0.3.9
@@ -2798,6 +2853,39 @@ packages:
     name: '@vue/web-component-wrapper'
     version: 1.3.0
     dev: true
+
+  registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.3.8):
+    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/core/9.13.0
+    name: '@vueuse/core'
+    version: 9.13.0
+    dependencies:
+      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.16
+      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@9.13.0
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.3.8)
+      vue-demi: registry.npmmirror.com/vue-demi@0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  registry.npmmirror.com/@vueuse/metadata@9.13.0:
+    resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==, tarball: https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.13.0.tgz}
+    name: '@vueuse/metadata'
+    version: 9.13.0
+    dev: false
+
+  registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.3.8):
+    resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/shared/9.13.0
+    name: '@vueuse/shared'
+    version: 9.13.0
+    dependencies:
+      vue-demi: registry.npmmirror.com/vue-demi@0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   registry.npmmirror.com/@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==, tarball: https://registry.npmmirror.com/@webassemblyjs/ast/-/ast-1.11.6.tgz}
@@ -3323,10 +3411,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  registry.npmmirror.com/async-validator@3.5.2:
-    resolution: {integrity: sha512-8eLCg00W9pIRZSB781UUX/H6Oskmm8xloZfr09lz5bikRpBVDlJ3hRVuxxP1SxcwsEYfJ4IU8Q19Y8/893r3rQ==, tarball: https://registry.npmmirror.com/async-validator/-/async-validator-3.5.2.tgz}
+  registry.npmmirror.com/async-validator@4.2.5:
+    resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==, tarball: https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz}
     name: async-validator
-    version: 3.5.2
+    version: 4.2.5
     dev: false
 
   registry.npmmirror.com/async@2.6.4:
@@ -4041,8 +4129,9 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
-  registry.npmmirror.com/consolidate@0.15.1:
+  registry.npmmirror.com/consolidate@0.15.1(lodash@4.17.21):
     resolution: {integrity: sha512-DW46nrsMJgy9kqAbPt5rKaCr7uFtpo4mSUvLHIUbJEjm0vo+aY5QLwBUq3FK4tRnJr/X0Psc0C4jf/h+HtXSMw==, tarball: https://registry.npmmirror.com/consolidate/-/consolidate-0.15.1.tgz}
+    id: registry.npmmirror.com/consolidate/0.15.1
     name: consolidate
     version: 0.15.1
     engines: {node: '>= 0.10.0'}
@@ -4210,6 +4299,7 @@ packages:
         optional: true
     dependencies:
       bluebird: registry.npmmirror.com/bluebird@3.7.2
+      lodash: registry.npmmirror.com/lodash@4.17.21
     dev: true
 
   registry.npmmirror.com/content-disposition@0.5.4:
@@ -4871,23 +4961,32 @@ packages:
     version: 1.4.581
     dev: true
 
-  registry.npmmirror.com/element-plus@1.0.2-beta.71(vue@3.3.8):
-    resolution: {integrity: sha512-tlfbRORIav8gJcIpjZI5F6aJIVHIaDuGO6/vKu43lgYq4JS2JPNRTjvrSE2p4f5xLfaFNfOWjCS3sybXLfMg8g==, tarball: https://registry.npmmirror.com/element-plus/-/element-plus-1.0.2-beta.71.tgz}
-    id: registry.npmmirror.com/element-plus/1.0.2-beta.71
+  registry.npmmirror.com/element-plus@2.4.2(vue@3.3.8):
+    resolution: {integrity: sha512-E/HwXX7JF1LPvQSjs0fZ8WblIoc0quoXsRXQZiL7QDq7xJdNGSUaXtdk7xiEv7axPmLfEFtxE5du9fFspDrmJw==, tarball: https://registry.npmmirror.com/element-plus/-/element-plus-2.4.2.tgz}
+    id: registry.npmmirror.com/element-plus/2.4.2
     name: element-plus
-    version: 1.0.2-beta.71
+    version: 2.4.2
     peerDependencies:
-      vue: 3.1.x
+      vue: ^3.2.0
     dependencies:
-      '@element-plus/icons': registry.npmmirror.com/@element-plus/icons@0.0.11
-      '@popperjs/core': registry.npmmirror.com/@popperjs/core@2.11.8
-      async-validator: registry.npmmirror.com/async-validator@3.5.2
+      '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor@3.6.1
+      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue@2.1.0(vue@3.3.8)
+      '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom@1.5.3
+      '@popperjs/core': registry.npmmirror.com/@sxzz/popperjs-es@2.11.7
+      '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.201
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es@4.17.11
+      '@vueuse/core': registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.3.8)
+      async-validator: registry.npmmirror.com/async-validator@4.2.5
       dayjs: registry.npmmirror.com/dayjs@1.11.10
+      escape-html: registry.npmmirror.com/escape-html@1.0.3
       lodash: registry.npmmirror.com/lodash@4.17.21
-      mitt: registry.npmmirror.com/mitt@2.1.0
-      normalize-wheel: registry.npmmirror.com/normalize-wheel@1.0.1
-      resize-observer-polyfill: registry.npmmirror.com/resize-observer-polyfill@1.5.1
+      lodash-es: registry.npmmirror.com/lodash-es@4.17.21
+      lodash-unified: registry.npmmirror.com/lodash-unified@1.0.3(@types/lodash-es@4.17.11)(lodash-es@4.17.21)(lodash@4.17.21)
+      memoize-one: registry.npmmirror.com/memoize-one@6.0.0
+      normalize-wheel-es: registry.npmmirror.com/normalize-wheel-es@1.2.0
       vue: registry.npmmirror.com/vue@3.3.8
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: false
 
   registry.npmmirror.com/emoji-regex@8.0.0:
@@ -5071,7 +5170,6 @@ packages:
     resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==, tarball: https://registry.npmmirror.com/escape-html/-/escape-html-1.0.3.tgz}
     name: escape-html
     version: 1.0.3
-    dev: true
 
   registry.npmmirror.com/escape-string-regexp@1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==, tarball: https://registry.npmmirror.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz}
@@ -7195,6 +7293,27 @@ packages:
       p-locate: registry.npmmirror.com/p-locate@4.1.0
     dev: true
 
+  registry.npmmirror.com/lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
+    name: lodash-es
+    version: 4.17.21
+    dev: false
+
+  registry.npmmirror.com/lodash-unified@1.0.3(@types/lodash-es@4.17.11)(lodash-es@4.17.21)(lodash@4.17.21):
+    resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==, tarball: https://registry.npmmirror.com/lodash-unified/-/lodash-unified-1.0.3.tgz}
+    id: registry.npmmirror.com/lodash-unified/1.0.3
+    name: lodash-unified
+    version: 1.0.3
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es@4.17.11
+      lodash: registry.npmmirror.com/lodash@4.17.21
+      lodash-es: registry.npmmirror.com/lodash-es@4.17.21
+    dev: false
+
   registry.npmmirror.com/lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==, tarball: https://registry.npmmirror.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz}
     name: lodash.debounce
@@ -7388,6 +7507,12 @@ packages:
       fs-monkey: registry.npmmirror.com/fs-monkey@1.0.5
     dev: true
 
+  registry.npmmirror.com/memoize-one@6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==, tarball: https://registry.npmmirror.com/memoize-one/-/memoize-one-6.0.0.tgz}
+    name: memoize-one
+    version: 6.0.0
+    dev: false
+
   registry.npmmirror.com/memory-fs@0.2.0:
     resolution: {integrity: sha512-+y4mDxU4rvXXu5UDSGCGNiesFmwCHuefGMoPCO1WYucNYj7DsLqrFaa2fXVI0H+NNiPTwwzKwspn9yTZqUGqng==, tarball: https://registry.npmmirror.com/memory-fs/-/memory-fs-0.2.0.tgz}
     name: memory-fs
@@ -7553,12 +7678,6 @@ packages:
     name: mitt
     version: 1.1.2
     dev: true
-
-  registry.npmmirror.com/mitt@2.1.0:
-    resolution: {integrity: sha512-ILj2TpLiysu2wkBbWjAmww7TkZb65aiQO+DkVdUTBpBXq+MHYiETENkKFMtsJZX1Lf4pe4QOrTSjIfUwN5lRdg==, tarball: https://registry.npmmirror.com/mitt/-/mitt-2.1.0.tgz}
-    name: mitt
-    version: 2.1.0
-    dev: false
 
   registry.npmmirror.com/mixin-deep@1.3.2:
     resolution: {integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==, tarball: https://registry.npmmirror.com/mixin-deep/-/mixin-deep-1.3.2.tgz}
@@ -7757,10 +7876,10 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  registry.npmmirror.com/normalize-wheel@1.0.1:
-    resolution: {integrity: sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==, tarball: https://registry.npmmirror.com/normalize-wheel/-/normalize-wheel-1.0.1.tgz}
-    name: normalize-wheel
-    version: 1.0.1
+  registry.npmmirror.com/normalize-wheel-es@1.2.0:
+    resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==, tarball: https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz}
+    name: normalize-wheel-es
+    version: 1.2.0
     dev: false
 
   registry.npmmirror.com/npm-run-path@2.0.2:
@@ -9065,12 +9184,6 @@ packages:
     name: requires-port
     version: 1.0.0
     dev: true
-
-  registry.npmmirror.com/resize-observer-polyfill@1.5.1:
-    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==, tarball: https://registry.npmmirror.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz}
-    name: resize-observer-polyfill
-    version: 1.5.1
-    dev: false
 
   registry.npmmirror.com/resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==, tarball: https://registry.npmmirror.com/resolve-from/-/resolve-from-4.0.0.tgz}
@@ -10500,6 +10613,24 @@ packages:
     deprecated: Since Vue CLI is now in maintenance mode, this plugin is no longer supported.
     dev: true
 
+  registry.npmmirror.com/vue-demi@0.14.6(vue@3.3.8):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.6.tgz}
+    id: registry.npmmirror.com/vue-demi/0.14.6
+    name: vue-demi
+    version: 0.14.6
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.3.8
+    dev: false
+
   registry.npmmirror.com/vue-eslint-parser@8.3.0(eslint@7.32.0):
     resolution: {integrity: sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==, tarball: https://registry.npmmirror.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz}
     id: registry.npmmirror.com/vue-eslint-parser/8.3.0
@@ -10542,7 +10673,7 @@ packages:
       vue: registry.npmmirror.com/vue@3.3.8
     dev: false
 
-  registry.npmmirror.com/vue-loader@15.11.1(css-loader@6.8.1)(webpack@5.89.0):
+  registry.npmmirror.com/vue-loader@15.11.1(css-loader@6.8.1)(lodash@4.17.21)(webpack@5.89.0):
     resolution: {integrity: sha512-0iw4VchYLePqJfJu9s62ACWUXeSqM30SQqlIftbYWM3C+jpPcEHKSPUZBLjSF9au4HTHQ/naF6OGnO3Q/qGR3Q==, tarball: https://registry.npmmirror.com/vue-loader/-/vue-loader-15.11.1.tgz}
     id: registry.npmmirror.com/vue-loader/15.11.1
     name: vue-loader
@@ -10564,7 +10695,7 @@ packages:
       vue-template-compiler:
         optional: true
     dependencies:
-      '@vue/component-compiler-utils': registry.npmmirror.com/@vue/component-compiler-utils@3.3.0
+      '@vue/component-compiler-utils': registry.npmmirror.com/@vue/component-compiler-utils@3.3.0(lodash@4.17.21)
       css-loader: registry.npmmirror.com/css-loader@6.8.1(webpack@5.89.0)
       hash-sum: registry.npmmirror.com/hash-sum@1.0.2
       loader-utils: registry.npmmirror.com/loader-utils@1.4.2
