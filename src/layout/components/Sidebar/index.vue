@@ -1,11 +1,12 @@
 <template>
-  <div class="">
-    <div class="sidebar-container">
-      <h1>占位</h1>
-      <el-scrollbar>
-        <sidebar-menu></sidebar-menu>
-      </el-scrollbar>
+  <div>
+    <div class="logo-container">
+      <el-avatar size="44" shape="square" src="https://i2.100024.xyz/2023/11/12/10j9cux.webp" />
+      <h1 class="logo-title" v-if="$store.getters.sidebarOpened">super-admin</h1>
     </div>
+    <el-scrollbar>
+      <sidebar-menu></sidebar-menu>
+    </el-scrollbar>
   </div>
 </template>
 
@@ -16,4 +17,19 @@ import SidebarMenu from './SidebarMenu'
 
 <style lang="scss" scoped>
 @import '@/styles/sidebar.scss';
+.logo-container {
+  height: 44px;
+  padding: 10px 0 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo-title {
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 50px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
 </style>
