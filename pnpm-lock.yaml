@@ -20,6 +20,9 @@ dependencies:
   vue:
     specifier: ^3.2.13
     version: registry.npmmirror.com/vue@3.3.8
+  vue-i18n:
+    specifier: ^9.4.1
+    version: registry.npmmirror.com/vue-i18n@9.4.1(vue@3.3.8)
   vue-router:
     specifier: ^4.0.3
     version: registry.npmmirror.com/vue-router@4.2.5(vue@3.3.8)
@@ -1731,6 +1734,33 @@ packages:
     name: '@humanwhocodes/object-schema'
     version: 1.2.1
     dev: true
+
+  registry.npmmirror.com/@intlify/core-base@9.4.1:
+    resolution: {integrity: sha512-WIwx+elsZbxSMxRG5+LC+utRohFvmZMoDevfKOfnYMLbpCjCSavqTfHJAtfsY6ruowzqXeKkeLhRHbYbjoJx5g==, tarball: https://registry.npmmirror.com/@intlify/core-base/-/core-base-9.4.1.tgz}
+    name: '@intlify/core-base'
+    version: 9.4.1
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/message-compiler': registry.npmmirror.com/@intlify/message-compiler@9.4.1
+      '@intlify/shared': registry.npmmirror.com/@intlify/shared@9.4.1
+    dev: false
+
+  registry.npmmirror.com/@intlify/message-compiler@9.4.1:
+    resolution: {integrity: sha512-aN2N+dUx320108QhH51Ycd2LEpZ+NKbzyQ2kjjhqMcxhHdxtOnkgdx+MDBhOy/CObwBmhC3Nygzc6hNlfKvPNw==, tarball: https://registry.npmmirror.com/@intlify/message-compiler/-/message-compiler-9.4.1.tgz}
+    name: '@intlify/message-compiler'
+    version: 9.4.1
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/shared': registry.npmmirror.com/@intlify/shared@9.4.1
+      source-map-js: registry.npmmirror.com/source-map-js@1.0.2
+    dev: false
+
+  registry.npmmirror.com/@intlify/shared@9.4.1:
+    resolution: {integrity: sha512-A51elBmZWf1FS80inf/32diO9DeXoqg9GR9aUDHFcfHoNDuT46Q+fpPOdj8jiJnSHSBh8E1E+6qWRhAZXdK3Ng==, tarball: https://registry.npmmirror.com/@intlify/shared/-/shared-9.4.1.tgz}
+    name: '@intlify/shared'
+    version: 9.4.1
+    engines: {node: '>= 16'}
+    dev: false
 
   registry.npmmirror.com/@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==, tarball: https://registry.npmmirror.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz}
@@ -10496,6 +10526,21 @@ packages:
     name: vue-hot-reload-api
     version: 2.3.4
     dev: true
+
+  registry.npmmirror.com/vue-i18n@9.4.1(vue@3.3.8):
+    resolution: {integrity: sha512-vnQyYE9LBuNOqPpETIcCaGnAyLEqfeIvDcyZ9T+WBCWFTqWw1J8FuF1jfeDwpHBi5JKgAwgXyq1mt8jp/x/GPA==, tarball: https://registry.npmmirror.com/vue-i18n/-/vue-i18n-9.4.1.tgz}
+    id: registry.npmmirror.com/vue-i18n/9.4.1
+    name: vue-i18n
+    version: 9.4.1
+    engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': registry.npmmirror.com/@intlify/core-base@9.4.1
+      '@intlify/shared': registry.npmmirror.com/@intlify/shared@9.4.1
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api@6.5.1
+      vue: registry.npmmirror.com/vue@3.3.8
+    dev: false
 
   registry.npmmirror.com/vue-loader@15.11.1(css-loader@6.8.1)(webpack@5.89.0):
     resolution: {integrity: sha512-0iw4VchYLePqJfJu9s62ACWUXeSqM30SQqlIftbYWM3C+jpPcEHKSPUZBLjSF9au4HTHQ/naF6OGnO3Q/qGR3Q==, tarball: https://registry.npmmirror.com/vue-loader/-/vue-loader-15.11.1.tgz}
