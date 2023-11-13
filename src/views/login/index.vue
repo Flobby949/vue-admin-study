@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form class="login-form">
+    <el-form class="login-form" :model="loginForm" :rules="loginRules">
       <div class="title-container">
         <h3 class="title">用户登录</h3>
       </div>
@@ -9,7 +9,7 @@
         <span class="svg-container">
           <svg-icon icon="user" />
         </span>
-        <el-input placeholder="username" name="username" type="text" />
+        <el-input placeholder="username" name="username" type="text" v-model="loginForm.username" />
       </el-form-item>
 
       <el-form-item prop="password">
@@ -18,7 +18,7 @@
             <svg-icon icon="password" />
           </el-icon>
         </span>
-        <el-input placeholder="password" name="password" />
+        <el-input placeholder="password" name="password" v-model="loginForm.password" />
         <span class="show-pwd">
           <el-icon>
             <svg-icon icon="eye" />
@@ -32,10 +32,32 @@
 </template>
 
 <script setup>
-import {} from 'vue'
-// 导入组件之后无需注册可直接使用
-// import { Avatar, Edit } from '@element-plus/icons'
-// import SvgIcon from '@/components/SvgIcon'
+import { ref } from 'vue'
+import { validatePassword } from './rules'
+
+// 数据源
+const loginForm = ref({
+  username: 'admin',
+  password: 'admin123'
+})
+
+// 验证规则
+const loginRules = ref({
+  username: [
+    {
+      required: true,
+      trigger: 'blur',
+      message: '用户名为必填项'
+    }
+  ],
+  password: [
+    {
+      required: true,
+      trigger: 'blur',
+      validator: validatePassword()
+    }
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
@@ -74,6 +96,7 @@ $cursor: #fff;
         background: transparent;
         border: 0px;
         -webkit-appearance: none;
+        appearance: none;
         border-radius: 0px;
         padding: 12px 5px 12px 15px;
         color: $light_gray;
