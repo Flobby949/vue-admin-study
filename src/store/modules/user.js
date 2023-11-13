@@ -1,8 +1,18 @@
 import { login } from '@/api/system'
+import { setItem, getItem } from '@/utils/storage'
+import { TOKEN } from '@/constant'
+
 export default {
   namespaced: true,
-  state: () => ({}),
-  mutations: {},
+  state: () => ({
+    token: getItem(TOKEN) || ''
+  }),
+  mutations: {
+    setToken(state, token) {
+      state.token = token
+      setItem(TOKEN, token)
+    }
+  },
   actions: {
     login(context, userInfo) {
       const { username, password } = userInfo
@@ -13,6 +23,7 @@ export default {
         })
           .then((data) => {
             console.log(data.data)
+            this.commit('user/setToken', data.data.token)
             resolve(data)
           })
           .catch((err) => {
