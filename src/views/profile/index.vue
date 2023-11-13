@@ -1,18 +1,42 @@
 <template>
-  <div>
+  <div class="my-container">
     <el-row>
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
+      <el-col :span="6">
+        <project-card class="user-card"></project-card>
+      </el-col>
+      <el-col :span="18">
+        <el-card>
+          <el-tabs v-model="activeName">
+            <el-tab-pane :label="$t('msg.profile.feature')" name="feature">
+              <feature />
+            </el-tab-pane>
+            <el-tab-pane :label="$t('msg.profile.chapter')" name="chapter">
+              <chapter />
+            </el-tab-pane>
+            <el-tab-pane :label="$t('msg.profile.author')" name="author">
+              <author />
+            </el-tab-pane>
+          </el-tabs>
+        </el-card>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script setup>
-import {} from 'vue'
+import { ref } from 'vue'
+import ProjectCard from './components/ProjectCard'
+import Chapter from './components/Chapter'
+import Feature from './components/Feature'
+import Author from './components/Author'
+const activeName = ref('feature')
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.my-container {
+  padding-top: 43px;
+  .user-card {
+    margin-right: 20px;
+  }
+}
+</style>
