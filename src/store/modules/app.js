@@ -4,7 +4,8 @@ import { getItem, setItem } from '@/utils/storage'
 export default {
   namespaced: true,
   state: () => ({
-    sidebarOpened: true
+    sidebarOpened: true,
+    language: getItem(LANG) || 'zh'
   }),
   mutations: {
     triggerSidebarOpened(state) {
