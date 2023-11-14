@@ -3,8 +3,8 @@
     <el-card class="header">
       <div>
         <!-- 页面 -->
-        <el-button type="primary" @click="onImportExcelClick"> excel 导入</el-button>
-        <el-button type="success" @click="onToExcelClick"> excel 导出 </el-button>
+        <el-button type="primary" @click="onImportExcelClick">{{ $t('msg.excel.importExcel') }}</el-button>
+        <el-button type="success" @click="onToExcelClick">{{ $t('msg.excel.exportExcel') }}</el-button>
       </div>
     </el-card>
     <el-card>
