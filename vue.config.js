@@ -32,5 +32,17 @@ module.exports = defineConfig({
         }
       }
     }
+  },
+  // 代理
+  devServer: {
+    proxy: {
+      '/mock/article/sort': {
+        target: 'http://127.0.0.1:4523/m1/3590846-0-default/api',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/mock/article/sort': '/article/sort'
+        }
+      }
+    }
   }
 })

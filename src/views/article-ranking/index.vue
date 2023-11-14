@@ -29,15 +29,15 @@
 <script setup>
 import articleList from '@/constant/article.json'
 import { dynamicData, selectDynamicLabel, tableColumns } from './dynamic'
-import { onMounted } from 'vue'
 import { tableRef, initSortable } from './sortable'
+import { onMounted } from 'vue'
 
 const tableData = articleList.list
-console.log(tableData)
 
 // 表格拖拽相关
 const getTableData = () => {}
 onMounted(() => {
+  console.log(tableData)
   initSortable(tableData, getTableData)
 })
 </script>

@@ -10,6 +10,9 @@ const service = axios.create({
 // 请求拦截器
 service.interceptors.request.use(
   (config) => {
+    if (config.url.includes('mock')) {
+      return config
+    }
     // 在这个位置需要统一去注入 token
     if (store.getters.token) {
       if (isCheckTimeout()) {
