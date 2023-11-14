@@ -20,8 +20,8 @@
         <el-table-column prop="dept.deptName" label="部门"> </el-table-column>
         <el-table-column prop="createTime" label="创建时间"> </el-table-column>
         <el-table-column label="操作" fixed="right" width="260">
-          <template #default>
-            <el-button type="primary" size="small">查看</el-button>
+          <template #default="{ row }">
+            <el-button type="primary" size="small" @click="onShowClick(row.userId)">查看</el-button>
             <el-button type="info" size="small">编辑</el-button>
             <el-button type="danger" size="small">删除</el-button>
           </template>
@@ -67,6 +67,14 @@ const onImportExcelClick = () => {
 const exportToExcelVisible = ref(false)
 const onToExcelClick = () => {
   exportToExcelVisible.value = true
+}
+
+/**
+ * 查看按钮点击事件
+ */
+const onShowClick = (id) => {
+  console.log(id)
+  router.push(`/user/info/${id}`)
 }
 </script>
 
