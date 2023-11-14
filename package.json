@@ -15,6 +15,7 @@
     "dayjs": "^1.11.10",
     "element-plus": "^2.4.2",
     "file-saver": "^2.0.5",
+    "lint-staged": "^15.1.0",
     "path-browserify": "^1.0.1",
     "rgb-hex": "^4.1.0",
     "screenfull": "^6.0.2",
@@ -52,5 +53,11 @@
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add ."
+    ]
   }
 }
