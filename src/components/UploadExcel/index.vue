@@ -6,7 +6,12 @@
 
     <input ref="excelUploadInput" class="excel-upload-input" type="file" accept=".xlsx,.xls" @change="handleChange" />
     <!-- https://developer.mozilla.org/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API -->
-    <div class="drop" @drop="handleDrop" @dragover="handleDragover" @dragenter="handleDragover">
+    <div
+      class="drop"
+      @drop.stop.prevent="handleDrop"
+      @dragover.stop.prevent="handleDragover"
+      @dragenter.stop.prevent="handleDragover"
+    >
       <i class="el-icon-upload" />
       <span>拖入excel文件</span>
     </div>
@@ -16,7 +21,7 @@
 <script setup>
 import XLSX from 'xlsx'
 import { ref } from 'vue'
-import { getHeaderRow } from './utils'
+import { getHeaderRow, isExcel } from './utils'
 import { ElMessage } from 'element-plus'
 
 const props = defineProps({
@@ -98,6 +103,35 @@ const readerData = (rawFile) => {
  */
 const generateData = (excelData) => {
   props.onSuccess && props.onSuccess(excelData)
+}
+
+/**
+ * 拖拽文本释放时触发
+ */
+const handleDrop = (e) => {
+  // 上传中跳过
+  if (loading.value) return
+  const files = e.dataTransfer.files
+  if (files.length !== 1) {
+    ElMessage.error('必须要有一个文件')
+    return
+  }
+  const rawFile = files[0]
+  if (!isExcel(rawFile)) {
+    ElMessage.error('文件必须是 .xlsx, .xls, .csv 格式')
+    return false
+  }
+  // 触发上传事件
+  upload(rawFile)
+}
+
+/**
+ * 拖拽悬停时触发
+ */
+const handleDragover = (e) => {
+  // https://developer.mozilla.org/zh-CN/docs/Web/API/DataTransfer/dropEffect
+  // 在新位置生成源项的副本
+  e.dataTransfer.dropEffect = 'copy'
 }
 </script>
 
