@@ -124,7 +124,7 @@ const publicRoutes = [
         }
       },
       {
-        path: '/404',
+        path: '/:catchAll(.*)',
         name: '404',
         component: () => import('@/views/error-page/404')
       },
