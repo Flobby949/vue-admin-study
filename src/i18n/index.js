@@ -1,8 +1,7 @@
 import { createI18n } from 'vue-i18n'
 import mZhLocale from './lang/zh'
 import mEnLocale from './lang/en'
-import { getLanguage } from '@/utils/i18n'
-
+import store from '@/store'
 // 创建 message 数据源
 const messages = {
   en: {
@@ -15,6 +14,13 @@ const messages = {
       ...mZhLocale
     }
   }
+}
+
+/**
+ * 返回当前 lang
+ */
+function getLanguage() {
+  return store && store.getters && store.getters.language
 }
 
 // 初始化 i18n 实例

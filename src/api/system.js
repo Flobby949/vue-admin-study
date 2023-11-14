@@ -19,3 +19,13 @@ export const getUserInfo = () => {
     url: '/system/user/profile'
   })
 }
+
+/**
+ * 获取用户列表数据
+ */
+export const getUserManageList = (data) => {
+  return request({
+    url: '/system/user/list',
+    params: data
+  })
+}
