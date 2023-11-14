@@ -5,7 +5,11 @@
         <el-table-column label="排名" prop="ranking"></el-table-column>
         <el-table-column label="标题" prop="title"></el-table-column>
         <el-table-column label="作者" prop="author"></el-table-column>
-        <el-table-column label="发布日期" prop="publicDate"> </el-table-column>
+        <el-table-column label="发布日期" prop="publicDate">
+          <template #default="{ row }">
+            {{ $filters.relativeTime(row.publicDate) }}
+          </template>
+        </el-table-column>
         <el-table-column label="描述" prop="desc"></el-table-column>
         <el-table-column label="操作">
           <el-button type="primary" size="small" @click="onShowClick(row)">查看</el-button>

@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
+import rt from 'dayjs/plugin/relativeTime'
 
-// 把时间格式化为 YYYY-MM-DD HH:mm:ss 格式
-const dateFilter = (val, format = 'YYYY-MM-DD HH:mm:ss') => {
+const dateFilter = (val, format = 'YYYY-MM-DD') => {
   if (!isNaN(val)) {
     val = parseInt(val)
   }
@@ -9,8 +9,18 @@ const dateFilter = (val, format = 'YYYY-MM-DD HH:mm:ss') => {
   return dayjs(val).format(format)
 }
 
+// 加载相对时间插件
+dayjs.extend(rt)
+function relativeTime(val) {
+  if (!isNaN(val)) {
+    val = parseInt(val)
+  }
+  return dayjs().to(dayjs(val))
+}
+
 export default (app) => {
   app.config.globalProperties.$filters = {
-    dateFilter
+    dateFilter,
+    relativeTime
   }
 }
