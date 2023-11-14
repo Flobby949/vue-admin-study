@@ -35,6 +35,9 @@ dependencies:
   screenfull:
     specifier: ^6.0.2
     version: registry.npmmirror.com/screenfull@6.0.2
+  sortablejs:
+    specifier: 1.14.0
+    version: registry.npmmirror.com/sortablejs@1.14.0
   vue:
     specifier: ^3.2.13
     version: registry.npmmirror.com/vue@3.3.8(typescript@5.2.2)
@@ -10879,6 +10882,12 @@ packages:
       uuid: registry.npmmirror.com/uuid@8.3.2
       websocket-driver: registry.npmmirror.com/websocket-driver@0.7.4
     dev: true
+
+  registry.npmmirror.com/sortablejs@1.14.0:
+    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==, tarball: https://registry.npmmirror.com/sortablejs/-/sortablejs-1.14.0.tgz}
+    name: sortablejs
+    version: 1.14.0
+    dev: false
 
   registry.npmmirror.com/source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}

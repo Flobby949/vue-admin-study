@@ -29,8 +29,17 @@
 <script setup>
 import articleList from '@/constant/article.json'
 import { dynamicData, selectDynamicLabel, tableColumns } from './dynamic'
+import { onMounted } from 'vue'
+import { tableRef, initSortable } from './sortable'
+
 const tableData = articleList.list
 console.log(tableData)
+
+// 表格拖拽相关
+const getTableData = () => {}
+onMounted(() => {
+  initSortable(tableData, getTableData)
+})
 </script>
 
 <style lang="scss" scoped>
@@ -57,5 +66,11 @@ console.log(tableData)
     margin-top: 20px;
     text-align: center;
   }
+}
+
+::v-deep(.sortable-ghost) {
+  opacity: 0.6;
+  color: #fff !important;
+  background: #304156 !important;
 }
 </style>
